@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9e1e1; /* Color de fondo */
+}
+
+header {
+    background-color: #8a3030;
+    color: rgb(32, 22, 22); /* Color de texto */
+    padding: 20px;  /* espacio del titulo altura */
+    text-align: center;
+}
+
+nav {
+    background-color: #5f5858;
+    overflow: hidden; /* espacio utilizado para las categorias, intentar disminuir el espacio entre el titulo de abajo */
+}
+
+nav a {  /* espacio de las categorias */
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover { /* Hace que al pasar el mouse por las categorias se ponga blanco con letras negras */
+    background-color: #ddd;
+    color: black;
+}
+
+.container { /* espacio de los juegos y los titulos de los juegos*/
+    padding: 20px;
+}
+
+.category { /* espacio de los titulos de los juegos (dispensable, sin esto igual tiene formato)*/
+    margin-bottom: 20px;
+}
+
+.category h2 {  /* Titulos de los tipos de juegos (branja negra) */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game { /* casillas que contienen los juegos, ver mas adelante si se puede crear otra para las categorias y que los juegos queden al lado del otro. */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: calc(50% - 40px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.game h3 {  /* Titulos de los juegos (titulos dentro de las casillas de los juegos) */
+    margin-top: 0;
+}
+
+.game p { /* Descripcion de los juegos (descripcion dentro de las casillas de los juegos) */
+    color: #666;
+}
