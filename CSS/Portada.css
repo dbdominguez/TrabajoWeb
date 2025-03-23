@@ -1,10 +1,20 @@
+/* ======= ESTILOS GENERALES ======= */
 body {
+    background: linear-gradient(135deg, #f9e1e1 40%, #ffffff 100%);
     font-family: Arial, sans-serif;
-    background-color: #f9e1e1; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
+/* ======= NAVBAR ======= */
 nav {
     background-color: #8a3030;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
@@ -12,36 +22,33 @@ nav a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.container {
-    padding: 20px;
-}
-
-.category h2 {
-    background-color: #333;
+    background-color: #555;
     color: white;
-    padding: 10px;
+    border-radius: 5px;
 }
 
-.game {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* ======= HEADER CON ANIMACIÓN ======= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header {
+    animation: fadeIn 0.8s ease-in-out;
     display: flex;
     flex-direction: column;
     background-color: #f9e1e1;
+    padding: 15px;
 }
 
 .barra-superior {
@@ -51,122 +58,43 @@ header {
     background: #8a3030;
     border-radius: 50px;
     padding: 5px;
-}
-
-.cont-izq {
-    display: flex;
-    align-items: center;
     color: white;
-    margin-left: 20px;
 }
 
-.cont-der a {
+/* ======= BOTONES ======= */
+.btn {
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ======= TARJETAS ======= */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ======= FOOTER ======= */
+.footer {
+    background: linear-gradient(to right, #8a3030, #5c1c1c);
+    padding: 30px;
     color: white;
-    text-decoration: none;
-    margin-left: 20px;
-}
-
-.lineaV {
-    width: 3px;
-    height: 100px;
-    background-color: white;
-    transform: rotate(180deg);
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.buscador input {
-    padding: 8px;
-    border-radius: 50px;
-    width: 300px;
-}
-
-.logo img {
-    height: 300px;
-    width: auto;
-    margin-right: 55px;
-}
-
-.iconos img {
-    width: 60px;
-    height: auto;
-    margin-right: 75px;
-}
-
-.lineaA {
-    height: 4px;
-    background-color: rgb(38, 40, 75);
-}
-
-.lineaB {
-    height: 2px;
-    background-color: rgb(95, 95, 95);
-}
-
-.separador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgb(245, 180, 180);
-    border-radius: 50px;
-    padding: 5px;
-}
-
-.banner img {
-    height: 100%;
-    width: 100%;
-}
-
-.juego-1, .juego-2 {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    align-items: center;
-}
-
-.compra {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.precio {
-    padding: 5px;
-    font-size: x-large;
-    margin-right: 25px;
-}
-
-.barra-inferior {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #8a3030;
-    border-radius: 50px;
-    padding: 5px;
-}
-
-.metodo-pago img {
-    width: 250px;
-    height: auto;
-}
-
-.horario {
-    margin-left: auto;
-}
-
-.titulo {
-    display: flex;
-    justify-content: space-around;
-}
-
-.Formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    padding: 20px;
-    background: rgb(245, 180, 180);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: auto;
+.footer-img {
+    width: 150px;
+    margin-bottom: 10px;
 }
