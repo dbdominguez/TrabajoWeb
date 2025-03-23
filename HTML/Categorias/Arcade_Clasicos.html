@@ -1,82 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de video juegos</title>
-    <link rel="stylesheet" href="../../CSS/Portada.css">
-</head>
-<body>
-    <header>
-        <h1>Categoria</h1>
-    </header>
-    <nav>
-        <a href="../Paginas_Principales/Pprincipal.html">Inicio</a>        
-        <a href="../Accion_Aventura.html">Accion y aventura</a>
-        <a href="../Estrategia.html">Estrategia</a>
-        <a href="../Deporte_Carrera.html">Deportes y carreras</a>
-        <a href="../Simulacion.html">Simulacion</a>
-        <a href="../Rompecabezas_Logica.html">Rompecabezas y lógica</a>
-        <a href="../RPC.html">RPG</a>
-        <a href="../Arcade_Clasicos.html">Arcade y clasicos</a>            
-    </nav>
-    <div class="container">
-        <div id="accion" class="category">
-            <h2>Juegos de arcade </h2>
-            <div class="games">
-                <div class="game">
-                    <h3>Jurasic park arcade</h3>
-                    <img src="../../Imagenes/Arcade_Clasicos/jurassic_park.jpg" alt="200" width="200"> <!-- cambiar el tamaño al css-->
-                    <p>¡Adéntrate en una emocionante aventura llena de dinosaurios! En este juego de arcade, 
-                        tu misión es rescatar a los dinosaurios de una isla que ha caído en el caos. 
-                        Con gráficos impresionantes, un gameplay familiar y 9 misiones llenas de acción, 
-                        este título te sumerge en el mundo de Jurassic Park como nunca antes. 
-                        ¡Prepárate para enfrentarte a más de 30 especies de dinosaurios y restaurar 
-                        el orden en la isla!</p>                    
-                    <p><a href="../Juegos/Arcade_Clasicos/Jurassic_Park_Arcade.html">Jurasic park arcade</a></p>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visual Novel</title>
+        <link rel="stylesheet" href="../../CSS/Portada.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- Barra superior de la pagina -->  
+            <div class="barra-superior">
+                <div class="cont-izq">
+                    <p>Síguenos en redes sociales: </p>
+                    <a href="#twitter"></a><img src="../../Imagenes/img/x.png" alt="twitter">
+                    <a href="#instagram"></a><img src="../../Imagenes/img/ig.png" alt="instagram">
+                </div>
+                <div class="cont-der">
+                    <a href="#contacto">Contáctanos</a>                
+                    <a href="../../HTML/Paginas_Principales/Registro.html">Registrate</a>
+                </div>
+             </div>
+
+            <!-- Encabezado -->
+            <div class="main">
+                <div class="buscador">
+                    <input type="text" id="Busqueda" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+
+                <div class="logo">
+                    <a href="../../Index.html"><img src="../../Imagenes/img/Logo.png" alt="Logo de la PYME"></a> 
+                </div>
+
+                <div class="iconos">
+                    <a href="#carro"></a><img src="../../Imagenes/img/carro.png" alt="Carro">
+                    <a href="#cuenta"></a><img src="../../Imagenes/img/cuenta.png" alt="Cuenta">
                 </div>
             </div>
+        </header>
+           
+        <!-- Barra Categorias -->
+        <div class="categorias">
+            <a href="../../HTML/Categorias/survival-horror.html"><img src="../../Imagenes/img/terror.png" alt="terror"></a> 
+            <a href="../../HTML/Categorias/Estrategia.html"><img src="../../Imagenes/img/estrat.png" alt="terror"></a>
+            <a href="../../HTML/Categorias/deporte.html"><img src="../../Imagenes/img/deporte.png" alt="deporte"></a>
+            <a href="../../HTML/Categorias/simuladores.html"><img src="../../Imagenes/img/simular.png" alt="simuladores"></a>
+            <a href="../../HTML/Categorias/visual-novel.html"><img src="../../Imagenes/img/VN.png" alt="visual novel"></a>
+            <a href="../../HTML/Categorias/rol.html"><img src="../../Imagenes/img/rpg.png" alt="rpg"></a>
+            <a href="../../HTML/Categorias/Arcade_Clasicos.html"><img src="../../Imagenes/img/arcade.png" alt="rpg"></a>            
         </div>
-            <div class="games">
-                <div class="game">
-                    <h3>Pac man</h3>
-                    <img src="../../Imagenes/Arcade_Clasicos/pac_man.jpg" alt="200" width="200"> <!-- cambiar el tamaño al css-->
+
+
+        <hr class="lineaA">
+
+        <!-- Banner Categoria -->
+        <div class="separador">
+            <div class="banner">
+               <img src="../../Imagenes/img/bannerVN.png" alt="banner">
+            </div>
+        </div>
+
+        <hr class="lineaA">
+
+        <!-- Lista Juegos -->
+        <div class="listado">
+            <div class="juego-1">
+                <img src="../../Imagenes/img/pacman.png" alt="AAT">
+                <div class="info-1">
+                    <h1>Pac man</h1>
                     <p>¡El icónico clásico que marcó la historia de los videojuegos! En este legendario arcade, 
                         guiarás a Pac-Man a través de laberintos llenos de puntos, frutas y, por supuesto, 
                         los fantasmales Blinky, Pinky, Inky y Clyde. Con su jugabilidad sencilla pero adictiva, 
                         este título ha entretenido a generaciones y sigue siendo un emblema de la cultura gamer. 
-                        ¡Come, corre y esquiva para lograr la máxima puntuación!</p>                    
-                    <p><a href="../Juegos/Arcade_Clasicos/Pac_Man.html">Pac man</a></p>
+                        ¡Come, corre y esquiva para lograr la máxima puntuación!</p>
+                </div>
+                <div class="compra">
+                    <span class="precio">$44.990</span>
+                    <button type="submit">Comprar</button>
                 </div>
             </div>
-        </div>
-        <div id="accion" class="category">
-            <h2>Juegos clasicos</h2>
-            <div class="games">
-                <div class="game">
-                    <h3>The legend of Welda ocarina of time</h3>
-                    <img src="../../Imagenes/Arcade_Clasicos/the_legend_of_zelda_ocarina_of_time.jpg" alt="200" width="200"> <!-- cambiar el tamaño al css-->
-                    <p>¡Revive la historia y construye tu imperio! Este juego de estrategia en tiempo real te lleva a través 
-                        de las épocas, permitiéndote liderar civilizaciones icónicas, librar batallas épicas y tomar decisiones 
-                        que cambiarán el curso de la historia. Con gráficos impresionantes y una jugabilidad profunda, es 
-                        perfecto para los amantes de la estrategia. ¡El destino de tu imperio está en tus manos!</p>                    
-                    <p><a href="../Juegos/Arcade_Clasicos/The_Legend_of_Zelda_Ocarina_of_Time.html">The legend of Welda ocarina of time</a></p>
-                </div>
-            </div>
-        </div>
-            <div class="games">
-                <div class="game">
-                    <h3>Virtual fighter 5</h3>
-                    <img src="../../Imagenes/Arcade_Clasicos/fighter_5_of_time.jpg" alt="200" width="200"> <!-- cambiar el tamaño al css-->
+
+            <hr class="lineaB">
+
+            <div class="juego-2">
+                <img src="../../Imagenes/img/vf5.png" alt="DGV3">
+                <div class="info-2">
+                    <h1>Virtual fighter 5</h1>
                     <p>¡El clásico de lucha que marcó un antes y un después en los videojuegos! Este título, 
                         desarrollado por Sega, ofrece combates intensos con un elenco diverso de personajes, 
                         cada uno con estilos de lucha únicos. Con gráficos impresionantes y mecánicas de juego 
                         refinadas, es una experiencia imprescindible para los amantes de los juegos de pelea. 
-                        ¡Domina el arte del combate y demuestra tus habilidades en el ring virtual!</p>                    
-                    <p><a href="../Juegos/Arcade_Clasicos/Virtua_Fighter_5.html">Virtual fighter 5</a></p>
+                        ¡Domina el arte del combate y demuestra tus habilidades en el ring virtual!</p>
+                </div>
+                <div class="compra">
+                    <span class="precio">$14.990</span>
+                    <button type="submit">Comprar</button>
                 </div>
             </div>
         </div>
 
-</body>
+        <hr class="lineaA">
+
+        <!-- Pie de la Pagina -->
+        <footer class="barra-inferior">
+            <div class="inferior">
+                <div class="metodo-pago">
+                    <img src="../../Imagenes/img/webpay.png" alt="pago">
+                </div>
+
+                <hr class="lineaV">
+
+                <div class="horario">
+                    <p>Horario:</p>
+                    <p>Lunes a Viernes 10:00 a 18:00</p>
+                    <p>Sabados,Domingo o Festivos: Cerrado</p>
+                    <p>Telefono: +569 3964 1813</p>
+                </div>
+            </div>
+        </footer>
+   </body>
 </html>

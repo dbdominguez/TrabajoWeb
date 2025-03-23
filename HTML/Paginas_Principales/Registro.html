@@ -40,7 +40,8 @@
                 </div>
             </div>
         </header>
-           
+
+
         <!-- Barra Categorias -->
         <div class="categorias">
             <a href="../../HTML/Categorias/survival-horror.html"><img src="../../Imagenes/img/terror.png" alt="terror"></a> 
@@ -54,52 +55,74 @@
 
         <hr class="lineaA">
 
-        <!-- Banner Categoria -->
-        <div class="separador">
-            <div class="banner">
-               <img src="../../Imagenes/img/BannerSH.png" alt="banner">
-            </div>
+        <div class="titulo">
+            <h1>REGISTRATE</h1>
         </div>
+
+        <!-- Formulario -->
+        <div class="Formulario">
+            <form id="FormularioRegistro">
+                <div class="Datos">
+                    <label for="nombre">Nombre completo:*</label>
+                    <div class="caja">
+                        <input type="text" id="nombre" required>
+                    </div>
+                </div> 
+
+                <div class="Datos">
+                    <label for="usuario">Nombre de usuario:*</label>
+                    <div class="caja">
+                        <input type="text" id="usuario" required>
+                    </div>
+                </div>
+
+                <div class="Datos">
+                    <label for="email">Correo electrónico:*</label>
+                    <div class="caja">
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+
+                <div class="Datos">
+                    <label for="password">Contraseña:*</label>
+                    <div class="caja">
+                        <input type="password" id="password" required>
+                    </div>
+                </div>
+
+                <div class="Datos">
+                    <label for="password2">Repetir contraseña:*</label>
+                    <div class="caja">
+                        <input type="password" id="password2" required>
+                    </div>
+                </div>
+
+                <div class="Datos">
+                    <label for="fechaNacimiento">Fecha de nacimiento:*</label>
+                    <div class="caja">
+                        <input type="date" id="fechaNacimiento" required>
+                    </div>
+                </div>
+
+                <div class="Datos">
+                    <label for="direccion">Dirección de despacho:</label>
+                    <div class="caja">
+                        <input type="text" id="direccion">
+                    </div>
+                </div>
+           
+                <button type="submit">Registrar</button>
+                <button type="reset">Limpiar</button>
+
+                <p>Campo Obligatorio *</p>
+            </form>
+
+
+        </div> 
 
         <hr class="lineaA">
 
-        <!-- Lista Juegos -->
-        <div class="listado">
-            <div class="juego-1">
-                <img src="../../Imagenes/img/age2.png" alt="AAT">
-                <div class="info-1">
-                    <h1>Age of Empires II: Definitive Edition</h1>
-                    <p>¡Revive la historia y construye tu imperio! Este juego de estrategia en tiempo real te lleva a través de las épocas, permitiéndote 
-                        liderar civilizaciones icónicas, librar batallas épicas y tomar decisiones que cambiarán el curso de la historia. Con campañas 
-                        emocionantes y una jugabilidad profunda, es perfecto para los amantes de la estrategia. ¡El destino de tu imperio está en tus manos! </p>
-                </div>
-                <div class="compra">
-                    <span class="precio">$49.990</span>
-                    <button type="submit">Comprar</button>
-                </div>
-            </div>
-
-            <hr class="lineaB">
-
-            <div class="juego-2">
-                <img src="../../Imagenes/img/civVI.png" alt="DGV3">
-                <div class="info-2">
-                    <h1>Civilization VI</h1>
-                    <p>¡Da forma al mundo como un verdadero líder! Este aclamado juego de estrategia por turnos te permite construir y expandir tu civilización 
-                        desde los albores de la humanidad hasta la era moderna. Toma decisiones cruciales, negocia con líderes históricos y asegura tu lugar 
-                        en la historia. Con mapas dinámicos y un sinfín de posibilidades, cada partida es una experiencia única. 
-                        ¡El destino de tu civilización está en tus manos!</p>
-                </div>
-                <div class="compra">
-                    <span class="precio">$24.990</span>
-                    <button type="submit">Comprar</button>
-                </div>
-            </div>
-        </div>
-
-        <hr class="lineaA">
-
-        <!-- Pie de la Pagina -->        
+        <!-- Pie de la Pagina -->
         <footer class="barra-inferior">
             <div class="inferior">
                 <div class="metodo-pago">
@@ -115,4 +138,4 @@
 
         </footer>
     </body>
-</html>       
+</html>

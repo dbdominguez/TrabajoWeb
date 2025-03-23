@@ -3,15 +3,8 @@ body {
     background-color: #f9e1e1; /* Color de fondo */
 }
 
-header {
-    background-color: #8a3030;
-    color: rgb(32, 22, 22); /* Color de texto */
-    padding: 20px;  /* espacio del titulo altura */
-    text-align: center;
-}
-
 nav {
-    background-color: #5f5858;
+    background-color: #8a3030;
     overflow: hidden; /* espacio utilizado para las categorias, intentar disminuir el espacio entre el titulo de abajo */
 }
 
@@ -54,14 +47,255 @@ nav a:hover { /* Hace que al pasar el mouse por las categorias se ponga blanco c
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
-    width: calc(50% - 40px);
+    width: calc(100% - 40px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.game h3 {  /* Titulos de los juegos (titulos dentro de las casillas de los juegos) */
-    margin-top: 0;
 }
 
 .game p { /* Descripcion de los juegos (descripcion dentro de las casillas de los juegos) */
     color: #666;
+}
+
+
+/* Nuevo Añadido */
+header{
+    display:flex;
+    flex-direction: column;
+    background-color: #f9e1e1;   
+}
+
+/* Barra superior de la pagina */
+.barra-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #8a3030;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.cont-izq {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+}
+.cont-izq img{
+    margin-left: 10px;
+    width: 30px;
+    height: auto;
+}
+
+.cont-der {
+    display: flex;
+    margin-left: auto;
+    gap: 5px;
+}    
+.cont-der a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Encabezado de la pagina */
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.buscador input {
+    padding: 8px;
+    border-radius: 50px;
+    width: 300px;
+    margin-left: 75px;
+
+}
+.buscador button {
+    border-radius: 5px;
+}
+
+.logo img{
+    height: 300px;
+    width: auto;
+    margin-right: 55px;
+ 
+}
+
+.iconos img {
+    width: 60px;
+    height: auto;
+    margin-right: 75px;
+}
+
+/* Barra de Categorias */
+.categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;    
+}
+
+.categorias img{
+    height: 100px;
+    width: auto;
+}
+
+/* Separador */
+.lineaA {
+    border: none;
+    height: 4px;
+    background-color: rgb(38, 40, 75);
+    width: 100%;
+}
+
+.lineaB {
+    border: none;
+    height: 2px; 
+    background-color: rgb(95, 95, 95);
+    width: 100%;
+}
+
+/* Seccion Banner Categoria */
+.separador {
+    display:flex;
+    flex-direction: column;   
+    align-items: center;
+    background: rgb(245, 180, 180);
+    border-radius: 50px;
+    padding: 5px;    
+}
+
+.banner img{
+    height: 100%;
+    width: 100%;
+}
+
+/* Seccion Juego 1 */
+.juego-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.info-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    width: 80%;
+}
+
+.compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.precio {
+    padding: 5px;
+    font-size: x-large;
+    margin-right: 25px;
+}
+
+.juego-1 button{
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+}
+/* Seccion Juego 2 */
+.juego-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+.info-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    width: 80%;
+}
+
+.compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.precio {
+    padding: 5px;
+    font-size: x-large;
+    margin-right: 25px;
+}
+
+.juego-2 button{
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+}
+
+
+/* Pie de la pagina */
+.barra-inferior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #8a3030;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.inferior{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.metodo-pago img {
+    margin-left: 10px;
+    width: 250px;
+    height: auto;
+}
+
+.lineaV {
+    width: 3px; 
+    height: 100px;
+    background-color: white;
+    border: none; 
+    transform: rotate(180deg);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.horario {
+    margin-left: auto;
+    gap: 5px;  
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+
+.Formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    background: rgb(245, 180, 180);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: auto;
 }
