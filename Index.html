@@ -1,71 +1,232 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda</title>
-    <link rel="stylesheet" href="CSS/Portada.css">
-</head>
-    
-<body>
-    <header>
-        <div class="barra-superior d-flex justify-content-between align-items-center p-2 bg-dark text-white">
-            <div class="d-flex align-items-center">
-                <p class="mb-0 me-2">Síguenos en redes sociales:</p>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="Imagenes/img/x.png" alt="twitter" class="me-2">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="Imagenes/img/ig.png" alt="instagram">
-                </a>
-            </div>
-            <div>
-                <a href="#contacto" class="text-white me-3">Contáctanos</a>
-                <a href="HTML/Paginas_Principales/Registro.html" class="btn btn-primary btn-sm">Regístrate</a>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Barra Categorías -->
-    <div class="container text-center my-4">
-        <div class="row">
-            <div class="col-6 col-md-3 mb-3">
-                <a href="HTML/Categorias/survival-horror.html">
-                    <img src="Imagenes/img/terror.png" alt="Survival Horror" class="img-fluid">
-                </a>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <a href="HTML/Categorias/Estrategia.html">
-                    <img src="Imagenes/img/estrat.png" alt="Estrategia" class="img-fluid">
-                </a>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <a href="HTML/Categorias/deporte.html">
-                    <img src="Imagenes/img/deporte.png" alt="Deporte" class="img-fluid">
-                </a>
-            </div>
-            <div class="col-6 col-md-3 mb-3">
-                <a href="HTML/Categorias/simuladores.html">
-                    <img src="Imagenes/img/simular.png" alt="Simuladores" class="img-fluid">
-                </a>
-            </div>
-        </div>
-    </div>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tienda</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../TrabajoWeb/CSS/Portada.css">
+    </head>
 
-    <hr class="lineaA">
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <img src="Imagenes/img/webpay.png" alt="Pago Seguro" class="footer-img">
-            <p>Horario: Lunes a Viernes 10:00 - 18:00 | Cerrado Sábados, Domingos y Festivos</p>
-            <p>Teléfono: +569 3964 1813</p>
-        </div>
-    </footer>
+    <body>
+        <header>
+            <!-- Barra superior de la pagina -->  
+            <div class="barra-superior d-flex justify-content-between align-items-center p-2" style="background: #8a3030; border-radius: 50px;">
+                <div class="d-flex align-items-center cont-izq">
+                    <p class="mb-0 me-2">Síguenos en redes sociales:</p>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="../TrabajoWeb/Imagenes/img/x.png" alt="twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="../TrabajoWeb/Imagenes/img/ig.png" alt="instagram">
+                    </a>
+                </div>
+                <div class="d-flex align-items-center cont-der">
+                    <a href="#contacto" class="text-black btn btn-light btn-sm">Contáctanos</a>
+                    <a href="../TrabajoWeb/HTML/Paginas_Principales/Registro.html" class="text-black btn btn-light btn-sm">Regístrate</a>
+                </div>
+            </div>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+             <!-- Encabezado -->
+            <div class="main">
+                <div class="buscador">
+                    <input type="text" id="Busqueda" placeholder="Buscar">
+                    <button type="submit">Buscar</button>
+                </div>
+
+                <div class="logo">
+                    <a href="Index.html"><img src="../TrabajoWeb/Imagenes/img/Logo.png" alt="Logo de la PYME"></a>
+                </div>
+
+                <div class="iconos">
+                    <a href="../TrabajoWeb/HTML/Paginas_Principales/Carro.html"><img src="../TrabajoWeb/Imagenes/img/carro.png" alt="Carro"></a>
+                    <a href="#cuenta"></a><img src="../TrabajoWeb/Imagenes/img/cuenta.png" alt="Cuenta">
+                </div>
+            </div>
+        </header>
+               
+        <!-- Barra Categorias -->
+        <div class="categorias">
+            <a href="../TrabajoWeb/HTML/Categorias/survival-horror.html"><img src="../TrabajoWeb/Imagenes/img/terror.png" alt="terror"></a> 
+            <a href="../TrabajoWeb/HTML/Categorias/Estrategia.html"><img src="../TrabajoWeb/Imagenes/img/estrat.png" alt="terror"></a>
+            <a href="../TrabajoWeb/HTML/Categorias/deporte.html"><img src="../TrabajoWeb/Imagenes/img/deporte.png" alt="deporte"></a>
+            <a href="../TrabajoWeb/HTML/Categorias/simuladores.html"><img src="../TrabajoWeb/Imagenes/img/simular.png" alt="simuladores"></a>
+            <a href="../TrabajoWeb/HTML/Categorias/visual-novel.html"><img src="../TrabajoWeb/Imagenes/img/VN.png" alt="visual novel"></a>
+            <a href="../TrabajoWeb/HTML/Categorias/rol.html"><img src="../TrabajoWeb/Imagenes/img/rpg.png" alt="rpg"></a>
+            <a href="../TrabajoWeb/HTML/Categorias/Arcade-Clasicos.html"><img src="../TrabajoWeb/Imagenes/img/arcade.png" alt="rpg"></a>            
+        </div>
+
+        <hr class="lineaA">
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../TrabajoWeb/Imagenes/img/Dangan.png" class="d-block mx-auto w-50" alt="dangan">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white text-outline fs-1 fw-bolder">Danganronpa V3: Killing Harmony</h5>
+                  <p class="text-outlinelight fs-5">¡Usa el engaño y la lógica para que tus compañeros lleguen a la conclusión adecuada!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../TrabajoWeb/Imagenes/img/Flight.png" class="d-block mx-auto w-50" alt="Micros">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white text-outline fs-1 fw-bolder">Microsoft Flight Simulator 2024</h5>
+                  <p class="text-outlinelight fs-5">Es la hora de despegar contra el viento, no a favor de él.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="../TrabajoWeb/Imagenes/img/RE.png" class="d-block mx-auto w-50" alt="RE">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="text-white text-outline fs-1 fw-bolder">Resident Evil 2: Remake</h5>
+                  <p class="text-outlinelight fs-5">La pesadilla regresa en su forma definitiva.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <hr class="lineaA">
+
+        <!-- Categorias  -->            
+        <div class="container">
+            <div class="row"> 
+                <!-- Survival Horror -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos Survival Horror</h2>
+                            <p class="card-text text-center">¡Prepárate para sufrir el terror absoluto!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/sh2r.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">Silent Hill 2: Remake</p>
+                            <a href="../TrabajoWeb/HTML/Categorias/survival-horror.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estrategia -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos de Estrategia</h2>
+                            <p class="card-text text-center">¡Es hora de poner a prueba tu ingenio!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/civVI.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">Civilization VI</p>                            
+                            <a href="../TrabajoWeb/HTML/Categorias/Estrategia.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>                                                           
+                <!-- Deporte -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos de Deporte</h2>
+                            <p class="card-text text-center">¡Vive la emoción de la competencia sin salir de casa!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/NBA2k24.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">NBA2k24</p>                            
+                            <a href="../TrabajoWeb/HTML/Categorias/deporte.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Simuladores -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos de Simuladores</h2>
+                            <p class="card-text text-center">¡Haz realidad cualquier escenario que imagines!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/MFS2024.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">Microsoft Flight Simulator 2024</p>                              
+                            <a href="../TrabajoWeb/HTML/Categorias/simuladores.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div> 
+                
+                <!-- Visual Novel -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos Visual Novel</h2>
+                            <p class="card-text text-center">¡Sumérgete en historias inolvidables y vive la experiencia como si fueras parte de ellas!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/danganv3.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">Danganronpa V3: Killing Harmony</p>                              
+                            <a href="../TrabajoWeb/HTML/Categorias/visual-novel.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rol -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos de RPG</h2>
+                            <p class="card-text text-center">¡El viaje del héroe está por comenzar!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/kh3.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">Kingdom Hearts III</p>                             
+                            <a href="../TrabajoWeb/HTML/Categorias/rol.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arcade -->
+                <div class="col-md-6 col-lg-4 mb-4 mx-auto">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Juegos de Arcade & Clasicos</h2>
+                            <p class="card-text text-center">¡Diversión clásica, adrenalina y nostalgia en un solo lugar!</p>
+                            <h2 class="text-center">Novedades</h2>
+                            <img src="../TrabajoWeb/Imagenes/img/vf5.png" alt="rpg" class="d-block mx-auto">
+                            <p class="text-center">Virtual fighter 5</p>                             
+                            <a href="../TrabajoWeb/HTML/Categorias/Arcade-Clasicos.html" class="btn btn-primary">Ver más...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="lineaA">
+
+        <footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                    <div class="col-md-4">
+                        <div class="metodo-pago">
+                            <img src="../TrabajoWeb/Imagenes/img/webpay.png" alt="pago">
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="horario">
+                            <p class="mb-1 fw-bold">Horario:</p>
+                            <p class="mb-1">Lunes a Viernes 10:00 a 18:00</p>
+                            <p class="mb-1">Sábados, Domingos o Festivos: Cerrado</p>
+                            <p class="mb-0">Teléfono: +569 3964 1813</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
 </html>

@@ -1,36 +1,34 @@
 <!DOCTYPE html>
     <html lang="es">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Visual Novel</title>
+        <title>Tienda</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="../../CSS/Portada.css">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
 
     <body>
         <header>
             <!-- Barra superior de la pagina -->  
-            <div class="barra-superior">
-                <div class="cont-izq">
-                    <p>Síguenos en redes sociales: </p>
-                    <a href="#twitter"></a><img src="../../Imagenes/img/x.png" alt="twitter">
-                    <a href="#instagram"></a><img src="../../Imagenes/img/ig.png" alt="instagram">
+            <div class="barra-superior d-flex justify-content-between align-items-center p-2" style="background: #8a3030; border-radius: 50px;">
+                <div class="d-flex align-items-center cont-izq">
+                    <p class="mb-0 me-2">Síguenos en redes sociales:</p>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="../../Imagenes/img/x.png" alt="twitter">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="../../Imagenes/img/ig.png" alt="instagram">
+                    </a>
                 </div>
-                <div class="cont-der">
-                    <a href="#contacto">Contáctanos</a>  
-
-                    <!--boton Iniciar Secion-->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>
-                    <!--Fin del boton Inicio Secion, accion del modal-->
-                        <!--data-bs-toggle="modal": Indica que este botón abrirá un modal.-->
-                        <!--data-bs-target="#ModalInicioSecion": Indica que el modal que se abrirá es el que tiene el id="ModalInicioSecion".-->
+                <div class="d-flex align-items-center cont-der">
+                    <a href="#contacto" class="text-black btn btn-light btn-sm">Contáctanos</a>
+                    <a href="../../HTML/Paginas_Principales/Registro.html" class="text-black btn btn-light btn-sm">Regístrate</a>
+                    <button type="button" class="text-black btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>
                 </div>
-             </div>
+            </div>
 
-            <!-- Encabezado -->
+             <!-- Encabezado -->
             <div class="main">
                 <div class="buscador">
                     <input type="text" id="Busqueda" placeholder="Buscar">
@@ -38,26 +36,25 @@
                 </div>
 
                 <div class="logo">
-                    <a href="../../Index.html"><img src="../../Imagenes/img/Logo.png" alt="Logo de la PYME"></a> 
+                    <a href="../../Index.html"><img src="../../Imagenes/img/Logo.png" alt="Logo de la PYME"></a>
                 </div>
 
                 <div class="iconos">
-                    <a href="#carro"></a><img src="../../Imagenes/img/carro.png" alt="Carro">
+                    <a href="../../HTML/Paginas_Principales/Carro.html"><img src="../../Imagenes/img/carro.png" alt="Carro">
                     <a href="#cuenta"></a><img src="../../Imagenes/img/cuenta.png" alt="Cuenta">
                 </div>
             </div>
         </header>
-
-
+               
         <!-- Barra Categorias -->
         <div class="categorias">
-            <a href="../Categorias/survival-horror.html"><img src="../../Imagenes/img/terror.png" alt="terror"></a> 
-            <a href="../Categorias/Estrategia.html"><img src="../../Imagenes/img/estrat.png" alt="terror"></a>
-            <a href="../Categorias/deporte.html"><img src="../../Imagenes/img/deporte.png" alt="deporte"></a>
-            <a href="../Categorias/simuladores.html"><img src="../../Imagenes/img/simular.png" alt="simuladores"></a>
-            <a href="../Categorias/visual-novel.html"><img src="../../Imagenes/img/VN.png" alt="visual novel"></a>
-            <a href="../Categorias/rol.html"><img src="../../Imagenes/img/rpg.png" alt="rpg"></a>
-            <a href="../Categorias/Arcade_Clasicos.html"><img src="../../Imagenes/img/arcade.png" alt="rpg"></a>            
+            <a href="../../HTML/Categorias/survival-horror.html"><img src="../../Imagenes/img/terror.png" alt="terror"></a> 
+            <a href="../../HTML/Categorias/Estrategia.html"><img src="../../Imagenes/img/estrat.png" alt="terror"></a>
+            <a href="../../HTML/Categorias/deporte.html"><img src="../../Imagenes/img/deporte.png" alt="deporte"></a>
+            <a href="../../HTML/Categorias/simuladores.html"><img src="../../Imagenes/img/simular.png" alt="simuladores"></a>
+            <a href="../../HTML/Categorias/visual-novel.html"><img src="../../Imagenes/img/VN.png" alt="visual novel"></a>
+            <a href="../../HTML/Categorias/rol.html"><img src="../../Imagenes/img/rpg.png" alt="rpg"></a>
+            <a href="../../HTML/Categorias/Arcade-Clasicos.html"><img src="../../Imagenes/img/arcade.png" alt="rpg"></a>            
         </div>
 
         <hr class="lineaA">
@@ -66,6 +63,7 @@
             <h1>REGISTRATE</h1>
         </div>
 <!--Registro por boostrap-->
+
 <!-- Registro por Bootstrap -->
 <form class="row g-3 needs-validation p-4 border rounded shadow" novalidate>
     <!-- Título del formulario -->
@@ -187,9 +185,6 @@
 </form>
 <!-- Fin del formulario de registro -->
 
-
-        <hr class="lineaA">
-
 <!-- Modal Inicio de Secion -->
 <!--modal hecho con boostrap-->
 <div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -226,23 +221,28 @@
 
 <!--fin del modal-->
 
+<hr class="lineaA">
 
-
-        <!-- Pie de la Pagina -->
-        <footer class="barra-inferior">
-            <div class="inferior">
+<footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-md-4">
                 <div class="metodo-pago">
                     <img src="../../Imagenes/img/webpay.png" alt="pago">
                 </div>
-                <div class="horario">
-                    <p>Horario:</p>
-                    <p>Lunes a Viernes 10:00 a 18:00</p>
-                    <p>Sabados,Domingo o Festivos: Cerrado</p>
-                    <p>Telefono: +569 3964 1813</p>
-                </div>
             </div>
 
-        </footer>
+            <div class="col-md-4">
+                <div class="horario">
+                    <p class="mb-1 fw-bold">Horario:</p>
+                    <p class="mb-1">Lunes a Viernes 10:00 a 18:00</p>
+                    <p class="mb-1">Sábados, Domingos o Festivos: Cerrado</p>
+                    <p class="mb-0">Teléfono: +569 3964 1813</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../../JS/Juegos.js"></script>
 </html>
