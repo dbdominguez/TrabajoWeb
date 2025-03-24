@@ -18,8 +18,12 @@
                     <a href="#instagram"></a><img src="../../Imagenes/img/ig.png" alt="instagram">
                 </div>
                 <div class="cont-der">
-                    <a href="#contacto">Contáctanos</a>                
-                    <a href="../../HTML/Paginas_Principales/Registro.html">Registrate</a>
+                    <a href="#contacto">Contáctanos</a>  
+
+                    <!--boton registro-->
+                    <button id="registroBtn">Registro</button>
+                    <!--Fin del boton registro, accion del modal-->
+
                 </div>
              </div>
 
@@ -122,6 +126,57 @@
 
         <hr class="lineaA">
 
+<!--modal-->
+  <!-- Modal oculto -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="cerrarModal">&times;</span>
+      <h2>REGISTRATE</h2>
+      <form id="FormularioRegistro">
+        <!--NOMBRE-->
+        <div>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" required>
+        </div>
+        <!--correo-->
+        <div>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" required>
+        </div>
+        <!--contraseña-->
+        <div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" required>
+        </div>
+        <!--repetir contraseña-->
+        <div>
+        <label for="password2">Repetir contraseña:</label>
+        <input type="password" id="password" required>
+        </div>
+        <!--fecha de nacimiento-->
+        <div>
+        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" required>
+        </div>
+        <!--direccion-->
+        <div>
+        <label for="direccion">Dirección de despacho:</label>
+        <input type="text" id="direccion">
+        </div>
+        <!--boton enviar-->
+        <div>
+        <button type="submit">Enviar</button>
+        <!--boton limpiar-->
+        <button type="reset">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!--fin del modal-->
+
+
+
         <!-- Pie de la Pagina -->
         <footer class="barra-inferior">
             <div class="inferior">
@@ -137,5 +192,6 @@
             </div>
 
         </footer>
+        <script src="../../JS/Juegos.js"></script>
     </body>
 </html>
