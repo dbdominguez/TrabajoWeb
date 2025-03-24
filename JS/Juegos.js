@@ -3,26 +3,26 @@
 //Confirmar que se este cargando el JS en el navegador
 console.log("Archivo Juegos.js cargado correctamente");
 
+//Modal se maneja por el boostrap HTML
 
-document.addEventListener("DOMContentLoaded", () => {
-    const registroBtn = document.getElementById("registroBtn"); //Seleccion del boton REGISTRO
-    const modal = document.getElementById("modal"); //Seleccion del ID MODAL (DIV)
-    const cerrarModal = document.getElementById("enviarModal"); //Seleccion del boton Enviar
+//Validación de formulario Registro
+    (function () {
+        'use strict';
+        // Seleccionar todos los formularios que necesitan validación
+        var forms = document.querySelectorAll('.needs-validation');
 
-    // Abrir el modal
-    registroBtn.addEventListener("click", () => {
-        modal.style.display = "block";
-    });
-
-    // Cerrar el modal
-    cerrarModal.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    // Cerrar al hacer clik afuera
-    window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-});
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                // Prevenir el envío si el formulario no es válido
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    // Si es válido, redirigir al usuario
+                    event.preventDefault(); // Prevenir el envío predeterminado
+                    window.location.href = '../../../../Index.html';
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
