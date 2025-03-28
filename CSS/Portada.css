@@ -336,9 +336,19 @@ body {
                   0px -2px 0 black, 0px  2px 0 black;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: black;
+}
 
 
-
-
-
-
+.barra-lateral {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 400px;
+    padding: 20px;
+    background: rgb(245, 180, 180);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: auto;
+}
