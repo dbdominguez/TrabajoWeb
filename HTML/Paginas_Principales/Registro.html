@@ -58,8 +58,96 @@
         </div>
 
         <hr class="lineaA">
+    
+    <!-- Estilos personalizados para el botón de recuperar contraseña -->
+    <style>
+        .btn-custom {
+            background: none;
+            border: none;
+            color: #007bff; /* Color base */
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
 
-<!-- Registro por Bootstrap -->
+        .btn-custom:hover {
+            color: #0056b3; /* Cambio de color al pasar el mouse */
+        }
+
+        .btn-custom:focus, 
+        .btn-custom:active {
+            outline: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        
+    <!-- Modal Inicio de Sesión -->
+    <div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Título del modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Inicio de Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                
+                <!-- Cuerpo del modal -->
+                <div class="modal-body">
+                    <form id="FormularioInicio">
+                        <!-- Campo de correo -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <!-- Campo de contraseña -->
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+
+                        <!-- Botón de inicio de sesión -->
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                        
+                        <!-- Botón para recuperar contraseña (modificado) -->
+                        <div class="text-center mt-3">
+                            <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#ModalRecuperarContrasena">
+                                ¿Olvidaste tu contraseña?
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal para recuperar contraseña -->
+<div class="modal fade" id="ModalRecuperarContrasena" tabindex="-1" aria-labelledby="RecuperarLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="RecuperarLabel">Recuperar Contraseña</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <!-- Cuerpo del modal -->
+            <div class="modal-body">
+                <form id="RecuperarForm">
+                    <p>Ingresa tu correo electrónico para recibir un enlace de recuperación.</p>
+                    <div class="mb-3">
+                        <label for="recuperarEmail" class="form-label">Correo Electrónico:</label>
+                        <input type="email" class="form-control" id="recuperarEmail" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <hr class="lineaA">
+
+    <!-- Registro por Bootstrap -->
 <form class="row g-3 needs-validation p-4 border rounded shadow" novalidate>
     <!-- Título del formulario -->
     <div class="col-12 text-center">
@@ -172,86 +260,31 @@
         </div>
     </div>
 
-    <!-- Botones -->
-    <div class="col-12 d-flex justify-content-center gap-3">
-        <button class="btn btn-primary w-25" type="submit">Registrar</button>
-        <button class="btn btn-secondary w-25" type="reset">Limpiar</button>
-    </div>
-</form>
-<!-- Fin del formulario de registro -->
-
-<!-- Modal Inicio de Secion -->
-<!--modal hecho con boostrap-->
-<div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!--Titulo del modal-->
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Inicio de Sesión</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            
-            <!-- Cuerpo del modal -->
-            <div class="modal-body">
-                <form id="FormularioInicio">
-                    <!-- Campo de correo -->
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Correo Electrónico:</label>
-                        <input type="email" class="form-control" id="email" required>
+    <footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-md-4">
+                    <div class="metodo-pago">
+                        <img src="../../Imagenes/img/webpay.png" alt="pago">
                     </div>
-                    <!-- Campo de contraseña -->
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-
-                    <form>
-                        <!-- Campos de usuario y contraseña -->
-                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                        
-                        <!-- Botón para recuperar contraseña -->
-                        <div class="text-center mt-3">
-                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#ModalRecuperarContrasena">
-                                ¿Olvidaste tu contraseña?
-                            </button>
-                        </div>
-                    </form>
-                    
-                    <!-- Botones -->
-                    <div class="d-flex justify-content-between">
-                        <button type="submit" class="btn btn-primary">Ingresar</button>
-                        <button type="reset" class="btn btn-secondary">Limpiar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--fin del modal-->
-
-<hr class="lineaA">
-
-<footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
-    <div class="container">
-        <div class="row justify-content-center align-items-center text-center">
-            <div class="col-md-4">
-                <div class="metodo-pago">
-                    <img src="../../Imagenes/img/webpay.png" alt="pago">
                 </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="horario">
-                    <p class="mb-1 fw-bold">Horario:</p>
-                    <p class="mb-1">Lunes a Viernes 10:00 a 18:00</p>
-                    <p class="mb-1">Sábados, Domingos o Festivos: Cerrado</p>
-                    <p class="mb-0">Teléfono: +569 3964 1813</p>
+    
+                <div class="col-md-4">
+                    <div class="horario">
+                        <p class="mb-1 fw-bold">Horario:</p>
+                        <p class="mb-1">Lunes a Viernes 10:00 a 18:00</p>
+                        <p class="mb-1">Sábados, Domingos o Festivos: Cerrado</p>
+                        <p class="mb-0">Teléfono: +569 3964 1813</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../../JS/Juegos.js"></script>
+    </footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../../JS/Juegos.js"></script>
+    </html>
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../JS/Juegos.js"></script>
+</body>
 </html>
