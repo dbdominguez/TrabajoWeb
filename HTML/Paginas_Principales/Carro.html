@@ -24,12 +24,11 @@
                 <div class="d-flex align-items-center cont-der">
                     <a href="#contacto" class="text-black btn btn-light btn-sm">Contáctanos</a>
                     <a href="../../HTML/Paginas_Principales/Registro.html" class="text-black btn btn-light btn-sm">Regístrate</a>
-                    <button type="button" class="text-black btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>
-                
+                    <button type="button" class="text-black btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>               
                 </div>
             </div>
 
-             <!-- Modal de Iniciar Sesión -->
+            <!-- Modal de Iniciar Sesión -->
             <div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -62,8 +61,29 @@
                 </div>
             </div>
 
+            <!-- Modal de Recuperar Contraseña-->
+            <div class="modal fade" id="ModalRecuperarContrasena" tabindex="-1" aria-labelledby="RecuperarLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="RecuperarLabel">Recuperar Contraseña</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="RecuperarForm">
+                                <p>Ingresa tu correo electrónico para recibir un enlace de recuperación.</p>
+                                <div class="mb-3">
+                                    <label for="recuperarEmail" class="form-label">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="recuperarEmail" placeholder="ejemplo@correo.com" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-             <!-- Encabezado -->
+            <!-- Encabezado -->
             <div class="main">
                 <div class="buscador">
                     <input type="text" id="Busqueda" placeholder="Buscar">
@@ -239,12 +259,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-        
+       
         <!--PIE DE PAGINA-->        
         <footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
             <div class="container">

@@ -24,10 +24,66 @@
                 <div class="d-flex align-items-center cont-der">
                     <a href="#contacto" class="text-black btn btn-light btn-sm">Contáctanos</a>
                     <a href="../../HTML/Paginas_Principales/Registro.html" class="text-black btn btn-light btn-sm">Regístrate</a>
+                    <button type="button" class="text-black btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>
                 </div>
             </div>
 
-             <!-- Encabezado -->
+            <!-- Modal de Iniciar Sesión -->
+            <div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Inicio de Sesión</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+            
+                        <div class="modal-body">
+                            <form id="FormularioInicio">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Contraseña:</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+            
+                                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+            
+                                <div class="text-center mt-3">
+                                    <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#ModalRecuperarContrasena">
+                                        ¿Olvidaste tu contraseña?
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de Recuperar Contraseña-->
+            <div class="modal fade" id="ModalRecuperarContrasena" tabindex="-1" aria-labelledby="RecuperarLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="RecuperarLabel">Recuperar Contraseña</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="RecuperarForm">
+                                <p>Ingresa tu correo electrónico para recibir un enlace de recuperación.</p>
+                                <div class="mb-3">
+                                    <label for="recuperarEmail" class="form-label">Correo Electrónico:</label>
+                                    <input type="email" class="form-control" id="recuperarEmail" placeholder="ejemplo@correo.com" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+            <!-- Encabezado -->
             <div class="main">
                 <div class="buscador">
                     <input type="text" id="Busqueda" placeholder="Buscar">
@@ -108,6 +164,7 @@
 
         <hr class="lineaA">
 
+         <!--PIE DE PAGINA--> 
         <footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
             <div class="container">
                 <div class="row justify-content-center align-items-center text-center">
@@ -130,7 +187,9 @@
         </footer>
 
 
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap, JS y JQUERY -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../JS/Juegos.js"></script>
+    <script src="../../../JS/carrito.js"></script>
     </body>
 </html>        
