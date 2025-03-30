@@ -149,6 +149,17 @@ if (siguienteEnvioButton) {
         mostrarResumen();
     });
 }
+// Botón para volver a la sección de Productos desde Envío
+if (volverProductosButton) {
+    volverProductosButton.addEventListener("click", (event) => {
+        event.preventDefault(); // Evitar el comportamiento predeterminado del botón
+        console.log("Volviendo a la sección de Productos...");
+
+        // Ocultar la sección de Envío y mostrar la de Productos
+        seccionEnvio.style.display = "none";
+        seccionProductos.style.display = "block";
+    });
+}
 
 // Volver a la sección de Envío al hacer clic en "Volver" desde Precio
 if (volverEnvioButton) {
