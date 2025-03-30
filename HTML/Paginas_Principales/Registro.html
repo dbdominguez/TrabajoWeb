@@ -1,65 +1,61 @@
 <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tienda</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../CSS/Portada.css">
-    </head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/Portada.css">
+</head>
 
-    <body>
-        <header>
-            <!-- Barra superior de la pagina -->  
-            <div class="barra-superior d-flex justify-content-between align-items-center p-2" style="background: #8a3030; border-radius: 50px;">
-                <div class="d-flex align-items-center cont-izq">
-                    <p class="mb-0 me-2">Síguenos en redes sociales:</p>
-                    <a href="https://twitter.com" target="_blank">
-                        <img src="../../Imagenes/iconos/x.png" alt="twitter">
-                    </a>
-                    <a href="https://instagram.com" target="_blank">
-                        <img src="../../Imagenes/iconos/ig.png" alt="instagram">
-                    </a>
-                </div>
-                <div class="d-flex align-items-center cont-der">
-                    <a href="#contacto" class="text-black btn btn-light btn-sm">Contáctanos</a>
-                    <a href="../../HTML/Paginas_Principales/Registro.html" class="text-black btn btn-light btn-sm">Regístrate</a>
-                    <button type="button" class="text-black btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>
-                </div>
+<body>
+    <header>
+        <div class="barra-superior d-flex justify-content-between align-items-center p-2" style="background: #8a3030; border-radius: 50px;">
+            <div class="d-flex align-items-center cont-izq">
+                <p class="mb-0 me-2">Síguenos en redes sociales:</p>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="../../Imagenes/iconos/x.png" alt="twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="../../Imagenes/iconos/ig.png" alt="instagram">
+                </a>
             </div>
-
-             <!-- Encabezado -->
-            <div class="main">
-                <div class="buscador">
-                    <input type="text" id="Busqueda" placeholder="Buscar">
-                    <button type="submit">Buscar</button>
-                </div>
-
-                <div class="logo">
-                    <a href="../../Index.html"><img src="../../Imagenes/img/Logo.png" alt="Logo de la PYME"></a>
-                </div>
-
-                <div class="iconos">
-                    <a href="../../HTML/Paginas_Principales/Carro.html"><img src="../../Imagenes/iconos/carro.png" alt="Carro">
-                    <a href="#cuenta"></a><img src="../../Imagenes/iconos/cuenta.png" alt="Cuenta">
-                </div>
+            <div class="d-flex align-items-center cont-der">
+                <a href="#contacto" class="text-black btn btn-light btn-sm">Contáctanos</a>
+                <a href="../../HTML/Paginas_Principales/Registro.html" class="text-black btn btn-light btn-sm">Regístrate</a>
+                <button type="button" class="text-black btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#ModalInicioSecion">Iniciar Sesión</button>
             </div>
-        </header>
-               
-        <!-- Barra Categorias -->
-        <div class="categorias">
-            <a href="../../HTML/Categorias/survival-horror.html"><img src="../../Imagenes/banner/terror.png" alt="terror"></a> 
-            <a href="../../HTML/Categorias/Estrategia.html"><img src="../../Imagenes/banner/estrat.png" alt="terror"></a>
-            <a href="../../HTML/Categorias/deporte.html"><img src="../../Imagenes/banner/deporte.png" alt="deporte"></a>
-            <a href="../../HTML/Categorias/simuladores.html"><img src="../../Imagenes/banner/simular.png" alt="simuladores"></a>
-            <a href="../../HTML/Categorias/visual-novel.html"><img src="../../Imagenes/banner/VN.png" alt="visual novel"></a>
-            <a href="../../HTML/Categorias/rol.html"><img src="../../Imagenes/banner/rpg.png" alt="rpg"></a>
-            <a href="../../HTML/Categorias/Arcade-Clasicos.html"><img src="../../Imagenes/banner/arcade.png" alt="rpg"></a>            
         </div>
 
-        <hr class="lineaA">
-    
-    <!-- Estilos personalizados para el botón de recuperar contraseña -->
+        <div class="main">
+            <div class="buscador">
+                <input type="text" id="Busqueda" placeholder="Buscar">
+                <button type="submit">Buscar</button>
+            </div>
+
+            <div class="logo">
+                <a href="../../Index.html"><img src="../../Imagenes/img/Logo.png" alt="Logo de la PYME"></a>
+            </div>
+
+            <div class="iconos">
+                <a href="../../HTML/Paginas_Principales/Carro.html"><img src="../../Imagenes/iconos/carro.png" alt="Carro">
+                <a href="#cuenta"></a><img src="../../Imagenes/iconos/cuenta.png" alt="Cuenta">
+            </div>
+        </div>
+    </header>
+
+    <div class="categorias">
+        <a href="../../HTML/Categorias/survival-horror.html"><img src="../../Imagenes/banner/terror.png" alt="terror"></a>
+        <a href="../../HTML/Categorias/Estrategia.html"><img src="../../Imagenes/banner/estrat.png" alt="terror"></a>
+        <a href="../../HTML/Categorias/deporte.html"><img src="../../Imagenes/banner/deporte.png" alt="deporte"></a>
+        <a href="../../HTML/Categorias/simuladores.html"><img src="../../Imagenes/banner/simular.png" alt="simuladores"></a>
+        <a href="../../HTML/Categorias/visual-novel.html"><img src="../../Imagenes/banner/VN.png" alt="visual novel"></a>
+        <a href="../../HTML/Categorias/rol.html"><img src="../../Imagenes/banner/rpg.png" alt="rpg"></a>
+        <a href="../../HTML/Categorias/Arcade-Clasicos.html"><img src="../../Imagenes/banner/arcade.png" alt="rpg"></a>
+    </div>
+
+    <hr class="lineaA">
+
     <style>
         .btn-custom {
             background: none;
@@ -73,45 +69,34 @@
             color: #0056b3; /* Cambio de color al pasar el mouse */
         }
 
-        .btn-custom:focus, 
+        .btn-custom:focus,
         .btn-custom:active {
             outline: none;
             box-shadow: none;
         }
     </style>
-</head>
 
-<body>
-    <header>
-        
-    <!-- Modal Inicio de Sesión -->
     <div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <!-- Título del modal -->
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Inicio de Sesión</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                
-                <!-- Cuerpo del modal -->
+
                 <div class="modal-body">
                     <form id="FormularioInicio">
-                        <!-- Campo de correo -->
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo Electrónico:</label>
                             <input type="email" class="form-control" id="email" required>
                         </div>
-                        <!-- Campo de contraseña -->
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña:</label>
                             <input type="password" class="form-control" id="password" required>
                         </div>
 
-                        <!-- Botón de inicio de sesión -->
                         <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                        
-                        <!-- Botón para recuperar contraseña (modificado) -->
+
                         <div class="text-center mt-3">
                             <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#ModalRecuperarContrasena">
                                 ¿Olvidaste tu contraseña?
@@ -122,143 +107,170 @@
             </div>
         </div>
     </div>
-    <!-- Modal para recuperar contraseña -->
-<div class="modal fade" id="ModalRecuperarContrasena" tabindex="-1" aria-labelledby="RecuperarLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Encabezado -->
-            <div class="modal-header">
-                <h5 class="modal-title" id="RecuperarLabel">Recuperar Contraseña</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <!-- Cuerpo del modal -->
-            <div class="modal-body">
-                <form id="RecuperarForm">
-                    <p>Ingresa tu correo electrónico para recibir un enlace de recuperación.</p>
-                    <div class="mb-3">
-                        <label for="recuperarEmail" class="form-label">Correo Electrónico:</label>
-                        <input type="email" class="form-control" id="recuperarEmail" placeholder="ejemplo@correo.com" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+    <div class="modal fade" id="ModalRecuperarContrasena" tabindex="-1" aria-labelledby="RecuperarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="RecuperarLabel">Recuperar Contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="RecuperarForm">
+                        <p>Ingresa tu correo electrónico para recibir un enlace de recuperación.</p>
+                        <div class="mb-3">
+                            <label for="recuperarEmail" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="recuperarEmail" placeholder="ejemplo@correo.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <hr class="lineaA">
 
-    <!-- Registro por Bootstrap -->
-<form class="row g-3 needs-validation p-4 border rounded shadow" novalidate>
-    <!-- Título del formulario -->
-    <div class="col-12 text-center">
-        <h2 class="mb-4">REGISTRO</h2>
-    </div>
-
-    <!-- Nombres -->
-    <div class="col-md-6">
-        <label for="validationCustom01" class="form-label">Nombres</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="Ingrese sus nombres" required>
-        <div class="invalid-feedback">
-            Por favor ingrese sus nombres.
+    <form class="row g-3 needs-validation p-4 border rounded shadow" novalidate>
+        <div class="col-12 text-center">
+            <h2 class="mb-4">REGISTRO</h2>
         </div>
-    </div>
 
-    <!-- Apellidos -->
-    <div class="col-md-6">
-        <label for="validationCustom02" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Ingrese sus apellidos" required>
-        <div class="invalid-feedback">
-            Por favor ingrese sus apellidos.
-        </div>
-    </div>
-
-    <!-- Correo -->
-    <div class="col-md-6">
-        <label for="validationCustomUsername" class="form-label">Correo Electrónico</label>
-        <div class="input-group has-validation">
-            <span class="input-group-text">@</span>
-            <input type="email" class="form-control" id="validationCustomUsername" placeholder="ejemplo@correo.com" required>
+        <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Ingrese sus nombres" required>
             <div class="invalid-feedback">
-                Por favor ingrese un correo válido.
+                Por favor ingrese sus nombres.
             </div>
         </div>
-    </div>
 
-    <!-- Teléfono -->
-    <div class="col-md-6">
-        <label for="validationCustom05" class="form-label">Número de Teléfono</label>
-        <input type="tel" class="form-control" id="validationCustom05" placeholder="Ingrese su número de teléfono" required>
-        <div class="invalid-feedback">
-            Por favor ingrese su número de teléfono.
-        </div>
-    </div>
-
-    <!-- Dirección -->
-    <div class="col-md-12">
-        <label for="validationCustom03" class="form-label">Dirección</label>
-        <input type="text" class="form-control" id="validationCustom03" placeholder="Ingrese su dirección" required>
-        <div class="invalid-feedback">
-            Por favor ingrese su dirección.
-        </div>
-    </div>
-
-    <!-- Contraseña -->
-    <div class="col-md-6">
-        <label for="password" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
-        <div class="invalid-feedback">
-            Por favor ingrese una contraseña.
-        </div>
-    </div>
-
-    <!-- Confirmar Contraseña -->
-    <div class="col-md-6">
-        <label for="password2" class="form-label">Confirmar Contraseña</label>
-        <input type="password" class="form-control" id="password2" placeholder="Repita su contraseña" required>
-        <div class="invalid-feedback">
-            Por favor confirme su contraseña.
-        </div>
-    </div>
-
-    <!-- Región -->
-    <div class="col-md-6">
-        <label for="validationCustom04" class="form-label">Región</label>
-        <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="">Seleccione...</option>
-            <option value="arica">Región de Arica y Parinacota</option>
-            <option value="tarapaca">Región de Tarapacá</option>
-            <option value="antofagasta">Región de Antofagasta</option>
-            <option value="atacama">Región de Atacama</option>
-            <option value="coquimbo">Región de Coquimbo</option>
-            <option value="valparaiso">Región de Valparaíso</option>
-            <option value="metropolitana">Región Metropolitana</option>
-            <option value="ohiggins">Región de O'Higgins</option>
-            <option value="maule">Región del Maule</option>
-            <option value="nuble">Región del Ñuble</option>
-            <option value="biobio">Región del Biobío</option>
-            <option value="araucania">Región de La Araucanía</option>
-            <option value="rios">Región de Los Ríos</option>
-            <option value="lagos">Región de Los Lagos</option>
-            <option value="aysen">Región de Aysén</option>
-            <option value="magallanes">Región de Magallanes</option>
-        </select>
-        <div class="invalid-feedback">
-            Por favor seleccione una región.
-        </div>
-    </div>
-
-    <!--Aceptar terminos -->
-    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-                Acepto los términos y condiciones.
-            </label>
+        <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Ingrese sus apellidos" required>
             <div class="invalid-feedback">
-                Debes aceptar los términos y condiciones.
+                Por favor ingrese sus apellidos.
             </div>
         </div>
-    </div>
+
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Correo Electrónico</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="email" class="form-control" id="validationCustomUsername" placeholder="ejemplo@correo.com" required>
+                <div class="invalid-feedback">
+                    Por favor ingrese un correo válido.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom05" class="form-label">Número de Teléfono</label>
+            <input type="tel" class="form-control" id="validationCustom05" placeholder="Ingrese su número de teléfono" required>
+            <div class="invalid-feedback">
+                Por favor ingrese su número de teléfono.
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <label for="validationCustom03" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="validationCustom03" placeholder="Ingrese su dirección" required>
+            <div class="invalid-feedback">
+                Por favor ingrese su dirección.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+            <div class="invalid-feedback">
+                Por favor ingrese una contraseña.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="password2" class="form-label">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="password2" placeholder="Repita su contraseña" required>
+            <div class="invalid-feedback">
+                Por favor confirme su contraseña.
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustom04" class="form-label">Región</label>
+            <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Seleccione...</option>
+                <option value="arica">Región de Arica y Parinacota</option>
+                <option value="tarapaca">Región de Tarapacá</option>
+                <option value="antofagasta">Región de Antofagasta</option>
+                <option value="atacama">Región de Atacama</option>
+                <option value="coquimbo">Región de Coquimbo</option>
+                <option value="valparaiso">Región de Valparaíso</option>
+                <option value="metropolitana">Región Metropolitana</option>
+                <option value="ohiggins">Región de O'Higgins</option>
+                <option value="maule">Región del Maule</option>
+                <option value="nuble">Región del Ñuble</option>
+                <option value="biobio">Región del Biobío</option>
+                <option value="araucania">Región de La Araucanía</option>
+                <option value="rios">Región de Los Ríos</option>
+                <option value="lagos">Región de Los Lagos</option>
+                <option value="aysen">Región de Aysén</option>
+                <option value="magallanes">Región de Magallanes</option>
+            </select>
+            <div class="invalid-feedback">
+                Por favor seleccione una región.
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Acepto los términos y condiciones.
+                </label>
+                <div class="invalid-feedback">
+                    Debes aceptar los términos y condiciones.
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center mt-4">
+            <button class="btn btn-custom-primary me-2" type="submit">Registrar</button>
+            <button class="btn btn-custom-secondary" type="reset">Limpiar</button>
+        </div>
+        
+        <style>
+            .btn-custom-primary {
+                background-color: #0066ff; /* Azul fuerte */
+                color: white;
+                border-radius: 20px;
+                padding: 10px 20px;
+                border: none;
+                font-weight: bold;
+            }
+        
+            .btn-custom-primary:hover {
+                background-color: #004bcc; /* Azul más oscuro */
+            }
+        
+            .btn-custom-secondary {
+                background-color: #6c757d; /* Gris */
+                color: white;
+                border-radius: 20px;
+                padding: 10px 20px;
+                border: none;
+                font-weight: bold;
+            }
+        
+            .btn-custom-secondary:hover {
+                background-color: #565e64; /* Gris más oscuro */
+            }
+        
+            .col-12.text-center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px; /* Espaciado entre botones */
+            }
+        </style>
+            
+    </form>
 
     <footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
         <div class="container">
@@ -268,7 +280,7 @@
                         <img src="../../Imagenes/img/webpay.png" alt="pago">
                     </div>
                 </div>
-    
+
                 <div class="col-md-4">
                     <div class="horario">
                         <p class="mb-1 fw-bold">Horario:</p>
@@ -280,10 +292,6 @@
             </div>
         </div>
     </footer>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="../../JS/Juegos.js"></script>
-    </html>
-    <!-- Scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../JS/Juegos.js"></script>
 </body>
