@@ -118,150 +118,158 @@
 
         <hr class="lineaA">
 
-        <div class="card text-center">
-            <div class="card-header">
-                <ul class="nav nav-tabs card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="true" href="#seccion-productos">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#seccion-envio">Envio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#seccion-precio">Precio</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="container mt-5">
-                <!-- Sección de Productos -->
-                <div id="seccion-productos">
-                    <h2 class="text-center mb-4">Carrito de Compras</h2>
-                    <div id="carrito" class="row">
-                        <!-- Las tarjetas de los productos se generarán aquí -->
-                    </div>
-                    <h4>Total: $<span id="total">0</span></h4>
-                    <button id="vaciarCarrito" class="btn btn-danger mt-3">Vaciar Carrito</button>
-                    <button id="finalizarCompra" class="btn btn-success mt-3">Siguiente</button>
+        <div class="container">
+
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="true" href="#seccion-productos">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#seccion-envio">Envio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#seccion-precio">Precio</a>
+                        </li>
+                    </ul>
                 </div>
-        
-                <!-- Sección de Envío -->
-                <div id="seccion-envio" style="display: none;">
-                    <h2 class="text-center mb-4">Información de Envío o Retiro</h2>
-                    <form>
-                        <!-- Selección de método -->
-                        <div class="mb-3">
-                            <label for="metodo" class="form-label">Selecciona un método:</label>
-                            <select class="form-select" id="metodo" onchange="mostrarFormulario()">
-                                <option value="" selected disabled>Selecciona una opción</option>
-                                <option value="envio">Envío a domicilio</option>
-                                <option value="retiro">Retiro en local</option>
-                            </select>
+                <div class="container mt-5">
+                    <!-- Sección de Productos -->
+                    <div id="seccion-productos">
+                        <h2 class="text-center mb-4">Carrito de Compras</h2>
+                        <div id="carrito" class="row">
+                            <!-- Las tarjetas de los productos se generarán aquí -->
                         </div>
-        
-                        <!-- Campos para Envío a domicilio -->
-                        <div id="form-envio" style="display: none;">
-                            <h4 class="mb-3">Envío a domicilio</h4>
+                        <h4>Total: $<span id="total">0</span></h4>
+                        <button id="vaciarCarrito" class="btn btn-danger mt-3">Vaciar Carrito</button>
+                        <button id="finalizarCompra" class="btn btn-success mt-3">Siguiente</button>
+                    </div>
+            
+                    <!-- Sección de Envío -->
+                    <div id="seccion-envio" style="display: none;">
+                        <h2 class="text-center mb-4">Información de Envío o Retiro</h2>
+                        <form>
+                            <!-- Selección de método -->
                             <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre Completo</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+                                <label for="metodo" class="form-label">Selecciona un método:</label>
+                                <select class="form-select" id="metodo" onchange="mostrarFormulario()">
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option value="envio">Envío a domicilio</option>
+                                    <option value="retiro">Retiro en local</option>
+                                </select>
                             </div>
-                            <div class="mb-3">
-                                <label for="direccion" class="form-label">Dirección</label>
-                                <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección">
+            
+                            <!-- Campos para Envío a domicilio -->
+                            <div id="form-envio" style="display: none;">
+                                <h4 class="mb-3">Envío a domicilio</h4>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="direccion" class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="direccion" placeholder="Ingresa tu dirección">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ciudad" class="form-label">Ciudad</label>
+                                    <input type="text" class="form-control" id="ciudad" placeholder="Ingresa tu ciudad">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono">
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="ciudad" class="form-label">Ciudad</label>
-                                <input type="text" class="form-control" id="ciudad" placeholder="Ingresa tu ciudad">
+            
+                            <!-- Campos para Retiro en local -->
+                            <div id="form-retiro" style="display: none;">
+                                <h4 class="mb-3">Retiro en local</h4>
+                                <div class="mb-3">
+                                    <label for="nombre-retiro" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="nombre-retiro" placeholder="Ingresa tu nombre completo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefono-retiro" class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono-retiro" placeholder="Ingresa tu número de teléfono">
+                                </div>
+                                <p class="text-muted">Recuerda que puedes retirar tu pedido en nuestra sucursal más cercana.</p>
                             </div>
-                            <div class="mb-3">
-                                <label for="telefono" class="form-label">Teléfono</label>
-                                <input type="text" class="form-control" id="telefono" placeholder="Ingresa tu número de teléfono">
+            
+                            <!-- Botones -->
+                            <button id="volverProductos" class="btn btn-secondary mt-3">Volver</button>
+                            <button type="submit" class="btn btn-primary mt-3">Siguiente</button>
+                        </form>
+                    </div>
+                    
+            
+                    <!-- Sección de Precio -->
+                    <div id="seccion-precio" class="container mt-5" style="display: none;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="text-center mb-4">Resumen de Precio</h2>
+            
+                                <!-- Resumen del total -->
+                                <div class="mb-3">
+                                    <p class="text-center">El total de tu compra es: <strong>$<span id="total-precio">0</span></strong></p>
+                                </div>
+            
+                                <!-- Selección entre Boleta y Factura -->
+                                <div class="mb-3">
+                                    <label for="tipo-documento" class="form-label">Selecciona el tipo de documento:</label>
+                                    <select class="form-select" id="tipo-documento">
+                                        <option value="" selected disabled>Selecciona una opción</option>
+                                        <option value="boleta">Boleta</option>
+                                        <option value="factura">Factura</option>
+                                    </select>
+                                </div>
+            
+                                <!-- Contenedor para mostrar la boleta o factura -->
+                                <div id="documento-generado" class="mt-4 p-3 border rounded" style="background-color: #f8f9fa; display: none;">
+                                    <!-- El contenido de la boleta o factura se generará aquí -->
+                                </div>
+            
+                                <!-- Botón para volver -->
+                                <button id="volverEnvio" class="btn btn-secondary mt-3">Volver</button>
                             </div>
                         </div>
-        
-                        <!-- Campos para Retiro en local -->
-                        <div id="form-retiro" style="display: none;">
-                            <h4 class="mb-3">Retiro en local</h4>
-                            <div class="mb-3">
-                                <label for="nombre-retiro" class="form-label">Nombre Completo</label>
-                                <input type="text" class="form-control" id="nombre-retiro" placeholder="Ingresa tu nombre completo">
-                            </div>
-                            <div class="mb-3">
-                                <label for="telefono-retiro" class="form-label">Teléfono</label>
-                                <input type="text" class="form-control" id="telefono-retiro" placeholder="Ingresa tu número de teléfono">
-                            </div>
-                            <p class="text-muted">Recuerda que puedes retirar tu pedido en nuestra sucursal más cercana.</p>
+                    </div>
+            
+                    <!-- Sección de Precio -->
+                    <div id="seccion-precio" class="container mt-5" style="display: none;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h2 class="text-center mb-4">Resumen de Precio</h2>
+            
+                                <!-- Resumen del total -->
+                                <div class="mb-3">
+                                    <p class="text-center">El total de tu compra es: <strong>$<span id="total-precio">0</span></strong></p>
+                                </div>
+            
+                                <!-- Selección entre Boleta y Factura -->
+                                <div class="mb-3">
+                                    <label for="tipo-documento" class="form-label">Selecciona el tipo de documento:</label>
+                                    <select class="form-select" id="tipo-documento">
+                                        <option value="" selected disabled>Selecciona una opción</option>
+                                        <option value="boleta">Boleta</option>
+                                        <option value="factura">Factura</option>
+                                    </select>
+                                </div>
+            
+                                <!-- Contenedor para mostrar la boleta o factura -->
+                                <div id="documento-generado" class="mt-4 p-3 border rounded" style="background-color: #f8f9fa; display: none;">
+                                    <!-- El contenido de la boleta o factura se generará aquí -->
+                                </div>
+            
+                                <!-- Botón para volver -->
+                                <button id="volverEnvio" class="btn btn-secondary mt-3">Volver</button>
+                           </div>
                         </div>
-        
-                        <!-- Botones -->
-                        <button id="volverProductos" class="btn btn-secondary mt-3">Volver</button>
-                        <button type="submit" class="btn btn-primary mt-3">Siguiente</button>
-                    </form>
-                </div>
-        
-                <!-- Sección de Precio -->
-        <div id="seccion-precio" class="container mt-5" style="display: none;">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="text-center mb-4">Resumen de Precio</h2>
-        
-                    <!-- Resumen del total -->
-                    <div class="mb-3">
-                        <p class="text-center">El total de tu compra es: <strong>$<span id="total-precio">0</span></strong></p>
                     </div>
-        
-                    <!-- Selección entre Boleta y Factura -->
-                    <div class="mb-3">
-                        <label for="tipo-documento" class="form-label">Selecciona el tipo de documento:</label>
-                        <select class="form-select" id="tipo-documento">
-                            <option value="" selected disabled>Selecciona una opción</option>
-                            <option value="boleta">Boleta</option>
-                            <option value="factura">Factura</option>
-                        </select>
-                    </div>
-        
-                    <!-- Contenedor para mostrar la boleta o factura -->
-                    <div id="documento-generado" class="mt-4 p-3 border rounded" style="background-color: #f8f9fa; display: none;">
-                        <!-- El contenido de la boleta o factura se generará aquí -->
-                    </div>
-        
-                    <!-- Botón para volver -->
-                    <button id="volverEnvio" class="btn btn-secondary mt-3">Volver</button>
                 </div>
             </div>
         </div>
-        
-        <!-- Sección de Precio -->
-        <div id="seccion-precio" class="container mt-5" style="display: none;">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="text-center mb-4">Resumen de Precio</h2>
-        
-                    <!-- Resumen del total -->
-                    <div class="mb-3">
-                        <p class="text-center">El total de tu compra es: <strong>$<span id="total-precio">0</span></strong></p>
-                    </div>
-        
-                    <!-- Selección entre Boleta y Factura -->
-                    <div class="mb-3">
-                        <label for="tipo-documento" class="form-label">Selecciona el tipo de documento:</label>
-                        <select class="form-select" id="tipo-documento">
-                            <option value="" selected disabled>Selecciona una opción</option>
-                            <option value="boleta">Boleta</option>
-                            <option value="factura">Factura</option>
-                        </select>
-                    </div>
-        
-                    <!-- Contenedor para mostrar la boleta o factura -->
-                    <div id="documento-generado" class="mt-4 p-3 border rounded" style="background-color: #f8f9fa; display: none;">
-                        <!-- El contenido de la boleta o factura se generará aquí -->
-                    </div>
-        
-                    <!-- Botón para volver -->
-                    <button id="volverEnvio" class="btn btn-secondary mt-3">Volver</button>
-                </div>
-            </div>
-        </div>
+
+        <hr class="lineaA">
        
         <!--PIE DE PAGINA-->        
         <footer class="barra-inferior p-3 text-white" style="background: #8a3030; border-radius: 50px;">
@@ -284,6 +292,8 @@
                 </div>
             </div>
         </footer>
+
+
     <!--JQUERY-->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
