@@ -44,27 +44,19 @@ header {
 
 
 /* ENCABEZADO DE LA PAGINA */
-.main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;    
-    align-items: center;
-    text-align: center;
-    padding: 5px;
+.buscador .input-group {
+    width: 100%;
 }
 
 .buscador input {
-    padding: 8px;
-    border-radius: 50px;
-    width: 300px;
-    margin-left: 75px;
-
+    width: 80%;
 }
+
 .buscador button {
-    border-radius: 5px;
+    width: 20%; 
+    border-radius: 25px;
 }
 
-/* ======= ANIMACIÓN SOLO PARA EL LOGO ======= */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -76,34 +68,59 @@ header {
     }
 }
 
-.logo img{
+.logo img {
     animation: fadeIn 0.8s ease-in-out;
-    height: 300px;
+    height: auto;
+    max-height: 300px;
     width: auto;
-    margin-right: 55px;
- 
+    margin: 0 auto;
+    display: block;
 }
 
 .iconos img {
     width: 60px;
     height: auto;
-    margin-right: 75px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 80px;
+    }
+
+    .iconos img {
+        width: 35px;
+    }
+
+    .buscador input {
+        max-width: 250px;
+    }
 }
 
 
 /* Barra de Categorias */
-.categorias{
+.categorias {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5px;    
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 10px;
 }
 
-.categorias img{
-    height: 100px;
-    width: auto;
+.categorias a {
+    display: block;
+}
+
+.categorias img {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+}
+
+/* Tamaños más pequeños */
+@media (max-width: 768px) {
+    .categorias img {
+        width: 100px;
+    }
 }
 
 /* Separador */
@@ -167,6 +184,58 @@ body {
 }
 
 
+.btn-custom {
+    background: none;
+    border: none;
+    color: #007bff; /* Color base */
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+    color: #0056b3; /* Cambio de color al pasar el mouse */
+}
+
+.btn-custom:focus,
+.btn-custom:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.btn-custom-primary {
+    background-color: #0066ff; /* Azul fuerte */
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-custom-primary:hover {
+    background-color: #004bcc; /* Azul más oscuro */
+}
+
+.btn-custom-secondary {
+    background-color: #6c757d; /* Gris */
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-custom-secondary:hover {
+    background-color: #565e64; /* Gris más oscuro */
+}
+
+.col-12.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado entre botones */
+}
+
 /* ======= TARJETAS ======= */
 .card {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -186,26 +255,6 @@ body {
     color: white;
     padding: 10px;
 }
-
-.games {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.game { /* casillas que contienen los juegos, ver mas adelante si se puede crear otra para las categorias y que los juegos queden al lado del otro. */
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-    width: calc(100% - 40px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.game p { /* Descripcion de los juegos (descripcion dentro de las casillas de los juegos) */
-    color: #666;
-}
-
 
 /* ==== JUEGOS ==== */
 /* Seccion Juego 1 */
@@ -341,6 +390,24 @@ body {
   background-color: black;
 }
 
+.carrusel-container {
+    width: 100%; 
+    max-width: 450px;
+    height: auto;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 90%; 
+    object-fit: contain;
+}
+
+/* VIDEO */
+.video iframe {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
 
 /* PAGINA VIDEOJUEGO*/
 #nav-descripcion {

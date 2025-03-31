@@ -1,28 +1,42 @@
-//Modal REGISTRO
+// Confirmar que se está cargando el JS en el navegador
+console.log("Archivo validacion.js cargado correctamente");
 
-//Confirmar que se este cargando el JS en el navegador
-console.log("Archivo Juegos.js cargado correctamente");
+// Modal se maneja por el Bootstrap HTML
 
-//Modal se maneja por el boostrap HTML
+// Validación de formulario Registro
+(function () {
+    'use strict';
+    
+    var forms = document.querySelectorAll('.needs-validation');
 
-//Validación de formulario Registro
-    (function () {
-        'use strict';
-        // Seleccionar todos los formularios que necesitan validación
-        var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            var passwordInput = form.querySelector("#password");
+            var passwordError = form.querySelector("#passwordError");
 
-        Array.prototype.slice.call(forms).forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                // Prevenir el envío si el formulario no es válido
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                } else {
-                    // Si es válido, redirigir al usuario
-                    event.preventDefault(); // Prevenir el envío predeterminado
-                    window.location.href = '../../../../Index.html';
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    })();
+            // Expresión para validar la contraseña
+            var passwordPattern = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,16}$/;
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else if (!passwordPattern.test(passwordInput.value)) {
+                // No cumple
+                event.preventDefault();
+                event.stopPropagation();
+                passwordError.textContent = "La contraseña debe tener entre 8 y 16 caracteres, incluir al menos un número y un carácter especial.";
+                passwordInput.classList.add("is-invalid");
+            } else {
+                passwordInput.classList.remove("is-invalid");
+                passwordError.textContent = "";
+
+                // Redirigir
+                setTimeout(function () {
+                    window.location.href = 'Perfil.html';
+                }, 500);
+            }
+
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
