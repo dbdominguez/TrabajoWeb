@@ -27,12 +27,14 @@ console.log("Archivo validacion.js cargado correctamente");
                 passwordError.textContent = "La contraseña debe tener entre 8 y 16 caracteres, incluir al menos un número y un carácter especial.";
                 passwordInput.classList.add("is-invalid");
             } else {
+                event.preventDefault();
                 passwordInput.classList.remove("is-invalid");
                 passwordError.textContent = "";
 
-                // Redirigir
+                console.log("Redirigiendo a Perfil.html..."); 
+
                 setTimeout(function () {
-                    window.location.href = 'Perfil.html';
+                    window.location.href = "Perfil.html";
                 }, 500);
             }
 
