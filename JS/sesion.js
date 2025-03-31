@@ -36,10 +36,10 @@ document.getElementById("FormularioInicio").addEventListener("submit", function(
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    // Obtener usuarios almacenados
+    // Usuarios almacenados
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    // Buscar usuario en la lista
+    // Buscar usuario
     let usuarioEncontrado = usuarios.find(user => user.email === email && user.password === password);
 
     if (usuarioEncontrado) {
@@ -57,9 +57,9 @@ document.getElementById("FormularioInicio").addEventListener("submit", function(
         // Redirigir según el rol
         setTimeout(() => {
             if (usuarioEncontrado.role === "admin") {
-                window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html"; // Página del administrador
+                window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html"; // Administrador
             } else {
-                window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html"; // Página del usuario normal
+                window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html"; // Usuario
             }
         }, 500);
     } else {
@@ -88,9 +88,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (email) {
                 if (role === "admin") {
-                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html"; // Página del administrador
+                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html"; // Administrador
                 } else {
-                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html"; // Página del usuario
+                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html"; // Usuario
                 }
             } else {
                 event.preventDefault();
