@@ -51,3 +51,23 @@ document.getElementById("logout")?.addEventListener("click", function() {
 
     window.location.href = redirectPath;
 });
+
+
+// Redireccionar Icono
+document.addEventListener("DOMContentLoaded", function() {
+    let perfilIcono = document.getElementById("iconoPerfil");
+    let modalInicioSesion = new bootstrap.Modal(document.getElementById("ModalInicioSecion"));
+
+    perfilIcono.addEventListener("click", function(event) {
+        let email = localStorage.getItem("email");
+
+        if (email) {
+
+            window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
+        } else {
+
+            event.preventDefault(); 
+            modalInicioSesion.show();
+        }
+    });
+});
