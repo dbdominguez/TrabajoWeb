@@ -1,13 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let email = localStorage.getItem("email");
-    let role = localStorage.getItem("role");
-
-    if (email) {
-        console.log("Usuario autenticado:", email, "Rol:", role);
-    } else {
-        console.log("No hay usuario autenticado.");
-    }
-});
+// Confirmar que el archivo se está cargando correctamente
+console.log("Archivo sesion.js cargado correctamente");
 
 // Manejar el inicio de sesión en el modal
 document.getElementById("FormularioInicio").addEventListener("submit", function (event) {
@@ -17,7 +9,10 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    // Obtener usuarios
+    console.log("Correo ingresado:", email);
+    console.log("Contraseña ingresada:", password);
+
+    // Obtener usuarios desde localStorage
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     console.log("Usuarios en localStorage:", usuarios);
 
@@ -28,24 +23,34 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
         return;
     }
 
-    // Buscar usuario 
-    let usuarioEncontrado = usuarios.find(user => user.email === email && user.password === password);
+    // Buscar usuario
+    let usuarioEncontrado = usuarios.find(user => 
+        user.email.trim().toLowerCase() === email.toLowerCase() && 
+        user.password === password
+    );
 
     if (usuarioEncontrado) {
+        // Guardar sesión
         // Guardar sesión
         localStorage.setItem("email", usuarioEncontrado.email);
         localStorage.setItem("role", usuarioEncontrado.role || "cliente"); // Asignar rol por defecto si no existe
 
         console.log("Inicio de sesión exitoso:", usuarioEncontrado);
 
-        // Cerrar modal 
+        // Cerrar modal
         let modalElement = document.getElementById('ModalInicioSecion');
-        let modal = bootstrap.Modal.getInstance(modalElement);
-        if (modal) modal.hide();
+        if (modalElement) {
+            let modal = bootstrap.Modal.getInstance(modalElement);
+            if (modal) {
+                console.log("Cerrando modal...");
+                modal.hide();
+            }
+        }
 
-        // Redirigir 
+        // Redirigir al perfil
         setTimeout(() => {
-            window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
+            console.log("Redirigiendo a Perfil.html...");
+            window.location.href = "../../HTML/Paginas_Principales/Perfil.html"; // Ajusta la ruta si es necesario
         }, 500);
     } else {
         console.log("Error: Credenciales incorrectas.");
@@ -66,21 +71,22 @@ document.getElementById("logout")?.addEventListener("click", function () {
     window.location.href = redirectPath;
 });
 
-
-// Redireccionar Icono
-document.addEventListener("DOMContentLoaded", function() {
+// Redireccionar al perfil o mostrar el modal de inicio de sesión al hacer clic en el icono de perfil
+document.addEventListener("DOMContentLoaded", function () {
     let perfilIcono = document.getElementById("iconoPerfil");
     let modalInicioSesion = new bootstrap.Modal(document.getElementById("ModalInicioSecion"));
 
-    perfilIcono.addEventListener("click", function(event) {
+    perfilIcono?.addEventListener("click", function (event) {
         let email = localStorage.getItem("email");
 
         if (email) {
-
-            window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
+            // Si el usuario está autenticado, redirigir al perfil
+            console.log("Usuario autenticado. Redirigiendo al perfil...");
+            window.location.href = "../../HTML/Paginas_Principales/Perfil.html";
         } else {
-
-            event.preventDefault(); 
+            // Si no está autenticado, mostrar el modal de inicio de sesión
+            console.log("Usuario no autenticado. Mostrando modal de inicio de sesión...");
+            event.preventDefault();
             modalInicioSesion.show();
         }
     });
