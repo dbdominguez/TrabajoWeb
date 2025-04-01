@@ -1,0 +1,7 @@
+Admin:
+email: admin@tienda.com, password: Admin123!
+
+
+Cliente:
+email: cliente@tienda.com, password: Cliente1!
+
