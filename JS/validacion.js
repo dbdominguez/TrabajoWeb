@@ -64,6 +64,7 @@ function guardarDatosEnLocalStorage(form) {
     const direccion = form.querySelector("#validationCustom03").value;
     const region = form.querySelector("#validationCustom04").value;
     const password = form.querySelector("#password").value;
+    
 
     // Crear un objeto con los datos del usuario
     const usuario = {

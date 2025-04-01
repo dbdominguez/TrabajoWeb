@@ -50,10 +50,10 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
         setTimeout(() => {
             if (usuarioEncontrado.role === "admin") {
                 console.log("Redirigiendo a Perfil-Admin.html...");
-                window.location.href = "../../HTML/Paginas_Principales/Perfil-Admin.html"; // Ajusta la ruta si es necesario
+                window.location.href = "../../HTML/Paginas_Principales/Perfil-Admin.html";
             } else if (usuarioEncontrado.role === "cliente") {
                 console.log("Redirigiendo a Perfil.html...");
-                window.location.href = "../../HTML/Paginas_Principales/Perfil.html"; // Ajusta la ruta si es necesario
+                window.location.href = "../../HTML/Paginas_Principales/Perfil.html";
             } else {
                 console.log("Rol desconocido. No se puede redirigir.");
                 alert("Error: Rol desconocido. Contacta al administrador.");
