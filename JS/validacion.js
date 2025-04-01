@@ -1,7 +1,6 @@
 // Confirmar que se está cargando el JS en el navegador
 console.log("Archivo validacion.js cargado correctamente");
 
-// Modal se maneja por el Bootstrap HTML
 
 // Validación de formulario Registro
 (function () {

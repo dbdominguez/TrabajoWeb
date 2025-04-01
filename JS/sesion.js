@@ -64,3 +64,14 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
         alert("Correo o contraseña incorrectos. Por favor, inténtalo de nuevo.");
     }
 });
+// cierre de sesión
+document.getElementById("logout")?.addEventListener("click", function () {
+    // Limpiar datos de sesión
+    localStorage.removeItem("email");
+    localStorage.removeItem("role");
+
+    console.log("Sesión cerrada. Redirigiendo a Index.html...");
+
+    // Redirigir al index
+    window.location.href = "../../Index.html";
+});
