@@ -1,5 +1,13 @@
-// Confirmar que el archivo se está cargando correctamente
-console.log("Archivo sesion.js cargado correctamente");
+document.addEventListener("DOMContentLoaded", function() {
+    let email = localStorage.getItem("email");
+    let role = localStorage.getItem("role");
+
+    if (email) {
+        console.log("Usuario autenticado:", email, "Rol:", role);
+    } else {
+        console.log("No hay usuario autenticado.");
+    }
+});
 
 // Manejar el inicio de sesión en el modal
 document.getElementById("FormularioInicio").addEventListener("submit", function (event) {
@@ -9,10 +17,7 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    console.log("Correo ingresado:", email);
-    console.log("Contraseña ingresada:", password);
-
-    // Obtener usuarios desde localStorage
+    // Obtener usuarios
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     console.log("Usuarios en localStorage:", usuarios);
 
@@ -23,11 +28,8 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
         return;
     }
 
-    // Buscar usuario
-    let usuarioEncontrado = usuarios.find(user => 
-        user.email.trim().toLowerCase() === email.toLowerCase() && 
-        user.password === password
-    );
+    // Buscar usuario 
+    let usuarioEncontrado = usuarios.find(user => user.email === email && user.password === password);
 
     if (usuarioEncontrado) {
         // Guardar sesión
@@ -36,20 +38,14 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
 
         console.log("Inicio de sesión exitoso:", usuarioEncontrado);
 
-        // Cerrar modal
+        // Cerrar modal 
         let modalElement = document.getElementById('ModalInicioSecion');
-        if (modalElement) {
-            let modal = bootstrap.Modal.getInstance(modalElement);
-            if (modal) {
-                console.log("Cerrando modal...");
-                modal.hide();
-            }
-        }
+        let modal = bootstrap.Modal.getInstance(modalElement);
+        if (modal) modal.hide();
 
-        // Redirigir al perfil
+        // Redirigir 
         setTimeout(() => {
-            console.log("Redirigiendo a Perfil.html...");
-            window.location.href = "../../HTML/Paginas_Principales/Perfil.html"; // Ajusta la ruta si es necesario
+            window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
         }, 500);
     } else {
         console.log("Error: Credenciales incorrectas.");
@@ -70,22 +66,21 @@ document.getElementById("logout")?.addEventListener("click", function () {
     window.location.href = redirectPath;
 });
 
-// Redireccionar al perfil o mostrar el modal de inicio de sesión al hacer clic en el icono de perfil
-document.addEventListener("DOMContentLoaded", function () {
+
+// Redireccionar Icono
+document.addEventListener("DOMContentLoaded", function() {
     let perfilIcono = document.getElementById("iconoPerfil");
     let modalInicioSesion = new bootstrap.Modal(document.getElementById("ModalInicioSecion"));
 
-    perfilIcono?.addEventListener("click", function (event) {
+    perfilIcono.addEventListener("click", function(event) {
         let email = localStorage.getItem("email");
 
         if (email) {
-            // Si el usuario está autenticado, redirigir al perfil
-            console.log("Usuario autenticado. Redirigiendo al perfil...");
-            window.location.href = "../../HTML/Paginas_Principales/Perfil.html";
+
+            window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
         } else {
-            // Si no está autenticado, mostrar el modal de inicio de sesión
-            console.log("Usuario no autenticado. Mostrando modal de inicio de sesión...");
-            event.preventDefault();
+
+            event.preventDefault(); 
             modalInicioSesion.show();
         }
     });
