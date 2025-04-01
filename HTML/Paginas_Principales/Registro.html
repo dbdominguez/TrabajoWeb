@@ -27,6 +27,7 @@
         </div>
     
         <!-- Modal de Inicio de Sesión -->
+        <!-- Modal de Inicio de Sesión -->
         <div class="modal fade" id="ModalInicioSecion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -38,18 +39,13 @@
                         <form id="FormularioInicio">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico:</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+                                <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Contraseña:</label>
-                                <input type="password" class="form-control" id="password" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="role" class="form-label">Selecciona tu rol:</label>
-                                <select class="form-control" id="role" required>
-                                    <option value="admin">Administrador</option>
-                                    <option value="cliente">Cliente</option>
-                                </select>
+                                <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                                <div class="invalid-feedback">Por favor ingresa tu contraseña.</div>
                             </div>
                             <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                         </form>
@@ -57,7 +53,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Modal de Recuperar Contraseña-->
         <div class="modal fade" id="ModalRecuperarContrasena" tabindex="-1" aria-labelledby="RecuperarLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -227,27 +223,6 @@
         
     </form>
 <!-- Fin del registro de usuario-->
-
-<!-- 
-                                <button 
-                                class="btn btn-primary" 
-                                data-nombre="Pac-Man Museum" 
-                                data-descripcion="Nintendo Switch" 
-                                data-precio="32990"
-                                onclick="agregarAlCarritoDesdeHTML(this)">
-                                Agregar al carrito
-                                </button>
-                                
-                                
-                                -->
-
-
-
-
-
-
-
-
 
 
 
