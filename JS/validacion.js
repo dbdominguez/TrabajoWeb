@@ -64,7 +64,7 @@ function guardarDatosEnLocalStorage(form) {
     const direccion = form.querySelector("#validationCustom03").value;
     const region = form.querySelector("#validationCustom04").value;
     const password = form.querySelector("#password").value;
-    
+
 
     // Crear un objeto con los datos del usuario
     const usuario = {
@@ -74,7 +74,7 @@ function guardarDatosEnLocalStorage(form) {
         telefono,
         direccion,
         region,
-        password, // Incluir la contraseña (solo para pruebas)
+        password,
     };
 
     // Guardar el objeto en localStorage
@@ -95,7 +95,7 @@ function iniciarSesion(event) {
     const usuarioGuardado = localStorage.getItem("usuario");
 
     if (usuarioGuardado) {
-        const usuario = JSON.parse(usuarioGuardado); // Convertir de JSON a objeto
+        const usuario = JSON.parse(usuarioGuardado);
 
         // Validar el correo y la contraseña
         if (usuario.email === emailIngresado && usuario.password === passwordIngresado) {

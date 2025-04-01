@@ -32,7 +32,7 @@ document.getElementById("FormularioInicio").addEventListener("submit", function 
     if (usuarioEncontrado) {
         // Guardar sesión
         localStorage.setItem("email", usuarioEncontrado.email);
-        localStorage.setItem("role", usuarioEncontrado.role || "cliente"); // Asignar rol por defecto si no existe
+        localStorage.setItem("role", usuarioEncontrado.role || "cliente");
 
         console.log("Inicio de sesión exitoso:", usuarioEncontrado);
 
