@@ -1,77 +1,108 @@
-// Confirmar que el archivo se está cargando correctamente
-console.log("Archivo sesion.js cargado correctamente");
+document.addEventListener("DOMContentLoaded", function() {
+    let email = localStorage.getItem("email");
+    let role = localStorage.getItem("role");
+
+    if (email) {
+        console.log("Usuario autenticado:", email, "Rol:", role);
+    } else {
+        console.log("No hay usuario autenticado.");
+    }
+
+    // Modificar botón "Iniciar Sesión" para redirigir si ya hay sesión iniciada
+    let btnIniciarSesion = document.getElementById("btnIniciarSesion");
+    let modalInicioSesion = new bootstrap.Modal(document.getElementById("ModalInicioSecion"));
+
+    if (btnIniciarSesion) {
+        btnIniciarSesion.addEventListener("click", function(event) {
+            if (email) {
+                // Redirigir según el rol
+                if (role === "admin") {
+                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html";
+                } else {
+                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
+                }
+            } else {
+                // Abrir el modal si no hay sesión iniciada
+                modalInicioSesion.show();
+            }
+        });
+    }
+});
 
 // Manejar el inicio de sesión en el modal
-document.getElementById("FormularioInicio").addEventListener("submit", function (event) {
+document.getElementById("FormularioInicio").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Obtener los valores ingresados en el formulario
     let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    console.log("Correo ingresado:", email);
-    console.log("Contraseña ingresada:", password);
-
-    // Obtener usuarios desde localStorage
+    // Obtener usuarios
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-    console.log("Usuarios en localStorage:", usuarios);
-
-    // Verificar si hay usuarios registrados
-    if (usuarios.length === 0) {
-        console.log("No hay usuarios registrados en localStorage.");
-        alert("No hay usuarios registrados. Por favor, regístrate primero.");
-        return;
-    }
 
     // Buscar usuario
-    let usuarioEncontrado = usuarios.find(user => 
-        user.email.trim().toLowerCase() === email.toLowerCase() && 
-        user.password === password
-    );
+    let usuarioEncontrado = usuarios.find(user => user.email === email && user.password === password);
 
     if (usuarioEncontrado) {
         // Guardar sesión
         localStorage.setItem("email", usuarioEncontrado.email);
-        localStorage.setItem("role", usuarioEncontrado.role || "cliente");
+        localStorage.setItem("role", usuarioEncontrado.role);
 
         console.log("Inicio de sesión exitoso:", usuarioEncontrado);
 
         // Cerrar modal
         let modalElement = document.getElementById('ModalInicioSecion');
-        if (modalElement) {
-            let modal = bootstrap.Modal.getInstance(modalElement);
-            if (modal) {
-                console.log("Cerrando modal...");
-                modal.hide();
-            }
-        }
+        let modal = bootstrap.Modal.getInstance(modalElement);
+        if (modal) modal.hide();
 
-        // Redirigir según el rol del usuario
+        // Redirigir según el rol
         setTimeout(() => {
             if (usuarioEncontrado.role === "admin") {
-                console.log("Redirigiendo a Perfil-Admin.html...");
-                window.location.href = "../../HTML/Paginas_Principales/Perfil-Admin.html";
-            } else if (usuarioEncontrado.role === "cliente") {
-                console.log("Redirigiendo a Perfil.html...");
-                window.location.href = "../../HTML/Paginas_Principales/Perfil.html";
+                window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html"; 
             } else {
-                console.log("Rol desconocido. No se puede redirigir.");
-                alert("Error: Rol desconocido. Contacta al administrador.");
+                window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html";
             }
         }, 500);
     } else {
-        console.log("Error: Credenciales incorrectas.");
-        alert("Correo o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+        alert("Credenciales incorrectas. Intenta de nuevo.");
     }
 });
-// cierre de sesión
-document.getElementById("logout")?.addEventListener("click", function () {
-    // Limpiar datos de sesión
-    localStorage.removeItem("email");
-    localStorage.removeItem("role");
 
-    console.log("Sesión cerrada. Redirigiendo a Index.html...");
+// Cierre de sesión
+document.getElementById("logout")?.addEventListener("click", function() {
+    localStorage.clear();
 
-    // Redirigir al index
-    window.location.href = "../../Index.html";
+    let redirectPath = window.location.pathname.includes("Paginas_Principales") ? "../../Index.html" : "Index.html";
+
+    window.location.href = redirectPath;
+});
+
+// Redireccionar Icono de perfil
+document.addEventListener("DOMContentLoaded", function() {
+    let perfilIcono = document.getElementById("iconoPerfil");
+    let modalInicioSesion = new bootstrap.Modal(document.getElementById("ModalInicioSecion"));
+
+    if (perfilIcono) {
+        perfilIcono.addEventListener("click", function(event) {
+            let email = localStorage.getItem("email");
+            let role = localStorage.getItem("role");
+
+            if (email) {
+                if (role === "admin") {
+                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil-Admin.html";
+                } else {
+                    window.location.href = "../TrabajoWeb/HTML/Paginas_Principales/Perfil.html"; 
+                }
+            } else {
+                event.preventDefault();
+                modalInicioSesion.show();
+            }
+        });
+    }
+});
+
+// Forzar cerrado modal
+document.addEventListener("hidden.bs.modal", function () {
+    let backdrop = document.querySelector(".modal-backdrop");
+    if (backdrop) backdrop.remove();
+    document.body.classList.remove("modal-open");
 });
